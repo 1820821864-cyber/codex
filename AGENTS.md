@@ -14,6 +14,7 @@ This repository stores reusable short-drama Codex skills only. Detailed creative
 
 - Preserve user intent and do not invent project facts or preferences.
 - When a correction could become reusable behavior, explain the proposed rule and ask before editing a skill. A direct request to update counts as confirmation.
+- When the director explicitly authorizes automatic handling of a clearly defined class of equivalent follow-ups, apply later equivalent cases without asking again. Keep that standing authorization narrowly scoped and request confirmation for materially different rules.
 - Only confirmed reusable rules enter this repository. Local project facts never do.
 
 ## Validation and sync
