@@ -11,6 +11,7 @@
 提示词技能按需读取以下参考：
 
 - `references/seedance.md`：Seedance／即梦生成格式
+- `references/director-compact-format.md`：导演偏好的严格锁定与紧凑镜头模板
 - `references/shot-library.md`：镜头语言、稳定性与替代方案
 - `references/lighting-library.md`：光影、色彩与连续性
 - `references/delivery-checklist.md`：正式交付检查
@@ -32,5 +33,5 @@
 
 - `初版`：2.0重构前的完整快照。
 - `v2.0`：精简结构后的当前规范。
-- 当前维护版本：`2.0.6`，删除镜头卡语言字段，对白统一嵌入人物表演。
+- 当前维护版本：`2.0.7`，加入三层严格锁定、逐镜原文映射、动作可完成性检查与导演偏好的紧凑模板。
 - `scripts/sync.ps1`：只在技能内容实际变化后执行安全拉取、提交与推送；不强推。
