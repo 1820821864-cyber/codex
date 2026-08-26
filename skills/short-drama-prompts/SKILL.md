@@ -2,7 +2,7 @@
 name: short-drama-prompts
 description: 将短剧剧本、人物和资产转换为可执行的 AI 视频提示词。默认适配 Seedance／即梦，也可按指定工具改写。
 metadata:
-  version: "2.0.32"
+  version: "2.0.33"
 ---
 
 # 短剧视频提示词
@@ -13,7 +13,7 @@ metadata:
 
 1. 重读本技能、当前完整剧本、项目记忆、人物、资产、模板和已有提示词；对话记忆不替代本地文件。
 2. 只读取当前项目。除非导演明确点名，不搜索、比较或继承其他项目。
-3. 需要输出 Seedance 格式时读 [seedance.md](references/seedance.md)；采用导演偏好的紧凑提示词排版时读 [director-compact-format.md](references/director-compact-format.md)；选择镜头或强风格技法时读 [shot-library.md](references/shot-library.md)；建立光影或查连续性时读 [lighting-library.md](references/lighting-library.md)；正式交付前读 [delivery-checklist.md](references/delivery-checklist.md)。
+3. 需要输出 Seedance 格式时读 [seedance.md](references/seedance.md)；采用导演偏好的紧凑提示词排版时读 [director-compact-format.md](references/director-compact-format.md)；选择镜头、设计大型仪式、等级展示或强特效递进时读 [shot-library.md](references/shot-library.md)；建立光影或查连续性时读 [lighting-library.md](references/lighting-library.md)；正式交付前读 [delivery-checklist.md](references/delivery-checklist.md)。
 
 ## 剧情与上下文
 
