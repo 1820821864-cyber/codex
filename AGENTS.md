@@ -27,6 +27,7 @@ This repository stores reusable short-drama Codex skills only. Detailed creative
 
 ## Validation and sync
 
+- Unless the director explicitly names another destination, connect content changes only to `https://github.com/1820821864-cyber/codex` through `origin`; do not fetch from, pull from, or push to any other repository.
 - After skill changes, run `scripts/validate.ps1`, install through `scripts/install.ps1`, validate the installed copy, then use `scripts/sync.ps1 push` when a remote is configured.
 - Pull fast-forward only. Never force-push, rewrite remote history, or silently resolve concurrent conflicts.
 - A failed push must leave the local commit intact and be reported. Do not create empty commits.
