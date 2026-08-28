@@ -9,6 +9,8 @@
 | 人物／场景／道具、参考职责、三视图、可读文字资产 | `modules/assets-references.md` | source-context | 声音资产读audio | 10–11、29–33、38 |
 | 对白表演、情绪词、微动作、长对白、反应 | `modules/performance.md` | source-context、audio | 明显动作或跨镜时读shot | 6、12、23、25 |
 | 摄影机、空间、透视、受力动作、段间快照、硬切 | `modules/shot-continuity.md` | source-context | 对白表演读performance；镜长读timing；选镜读camera | 9、13、15–16、22 |
+| 实际位置与入画边界 CAM-FRAME、人物姿态 CAM-POSE、道具交接 CAM-PROP | `modules/shot-continuity.md` | source-context、assets | 字段读output-format | 5、12–13、16–17、22 |
+| 原有实体复用 AST-SCENE、项目身体与形态状态 AST-STATE | `modules/assets-references.md` | source-context | 跨镜延续读shot | 10–13、29、32–33 |
 | 单镜时长、4–30秒分段、核算、长镜头审批 | `modules/timing-segmentation.md` | source-context | 正式音频读audio；动作可完成性读shot | 7、9、21 |
 | 视觉媒介、项目风格、画幅、光影边界 | `modules/project-style.md` | 无 | 建立或核对光影时读lighting | 14、24、26 |
 | 交付层级、资产区、字段、省略、负向 | `modules/output-format.md` | 本次已加载的业务模块 | 正式单集读template；工具差异读adapter | 5、17、20、34–38 |

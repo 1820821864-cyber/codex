@@ -22,9 +22,9 @@
 8. 音频时间线与对白避让：通过
 9. 生成段完整性、单段最多9镜、连续对白单段归属、时长、镜头合计与段间快照：通过
 10. 人物资产、形象／面部／声音引用格式与视角映射：通过
-11. 场景／道具引用格式与动态状态：通过
-12. 画面可执行性、景别与动作可见性、心理描写隔离：通过
-13. 人物、受力动作链、强动作目标、命令执行链、道具、必要环境动态与段间连续性：通过
+11. 场景／道具引用格式、原有实体复用与动态状态：通过
+12. 画面可执行性、实际位置与入画／排除范围、景别与动作可见性、心理描写隔离：通过
+13. 人物姿态、受力动作链、强动作目标、命令执行链、道具数量／容器／持握与交接结果、必要环境动态与段间连续性：通过
 14. 光源依据与光影连续性：通过
 15. 画面关系构思、人物调度、场外入场预告、多人触发接力、空间封锁与视线探路、道具因果／状态线／首尾结果、复杂画面陈述、运镜起幅—过程—落幅、复合运镜主次、摄影机揭示路径、注意力路线、镜头动机、回忆插镜边界、摄影机驱动透视与特效稳定性：通过
 16. 全片硬切、序列观感、近似构图跳切、逐镜落幅与起幅承接、双向动静转换的运动动机与速度梯度、轴线侧别、剪辑落点与生成稳定性：通过
@@ -60,10 +60,12 @@
 | 1–3、19 | `modules/source-context.md` |
 | 4、7–8、18、27–28 | `modules/audio-timeline.md` |
 | 5、17、20、34–38 | `modules/output-format.md` 与 `modules/assets-references.md` |
-| 6、12、23、25 | `modules/performance.md` |
+| 6、23、25 | `modules/performance.md` |
+| 5、12、17、22 | `modules/shot-continuity.md` 的 CAM-FRAME／CAM-POSE；排版由 `modules/output-format.md` 管理 |
+| 12 | `modules/performance.md` |
 | 9、21 | `modules/timing-segmentation.md` 与 `modules/shot-continuity.md` |
 | 10–11、29–33 | `modules/assets-references.md` |
-| 13、16 | `modules/shot-continuity.md` |
+| 13、16 | `modules/shot-continuity.md` 的 CAM-POSE／CAM-PROP／CAM-SNAP；项目状态依据 `modules/assets-references.md` 的 AST-STATE |
 | 14 | `modules/project-style.md` 与 `libraries/lighting.md` |
 | 15 | `modules/shot-continuity.md`；按剧情加载 `libraries/ritual-vfx.md` |
 | 22 | `modules/shot-continuity.md` 与 `libraries/camera.md` |
@@ -78,3 +80,4 @@
 - 项目画幅未确认：第24项写“警告：待确认”，不得自行套用画幅。
 - 任何原文遗漏或改写、旁白进入模型、旁白与对白重叠、单段超过9镜、分段超出4–30秒、任一生成段缺少完整统一词头、用“同上”代替词头、无依据状态跳变、非硬切过渡、参考外观被文字覆盖、缺图导致任务暂停、泛化环境底声、背景音乐、可读文字交给模型生成，均为失败并先修正。
 - 仪式、等级或强特效不存在时，第15项只检查镜头动机和摄影机驱动的空间稳定，不加载仪式特效库。
+- 第11项按 AST-SCENE 检查原有实体复用；第12项按 CAM-FRAME 检查摄影机可见范围与角色视线是否混淆；第13、16项按 CAM-POSE／CAM-PROP／CAM-SNAP 逐镜及跨段检查。发现矛盾时标为失败并先修正，不能以段首或段尾已有概括说明代替逐镜核对。
