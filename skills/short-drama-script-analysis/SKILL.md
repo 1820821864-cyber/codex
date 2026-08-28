@@ -2,7 +2,7 @@
 name: short-drama-script-analysis
 description: 分析短剧剧本并建立人物与项目档案。用于题材诊断、角色关系、节奏与项目建档；不用于未经授权的剧情改写。
 metadata:
-  version: "3.0.0"
+  version: "3.1.0"
 ---
 
 # 短剧剧本分析

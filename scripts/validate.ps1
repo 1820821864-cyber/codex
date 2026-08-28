@@ -42,6 +42,7 @@ if (-not $python) { throw "No usable Python runtime among: $($pythonCandidates -
 $skillNames = @(
   'short-drama-director',
   'short-drama-script-analysis',
+  'short-drama-story-writing',
   'short-drama-assets',
   'short-drama-prompts'
 )
@@ -109,4 +110,4 @@ foreach ($relative in $requiredPromptFiles) {
   }
 }
 
-Write-Host "[validate] 3.0 skills, versions, links, and module routing passed: $SkillsRoot"
+Write-Host "[validate] Short-drama skills, versions, links, and module routing passed: $SkillsRoot"

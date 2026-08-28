@@ -1,4 +1,4 @@
-# Codex Short Drama Director 3.0
+# Codex Short Drama Director 3.1
 
 面向 Codex 的模块化短剧工作流技能仓库。云端只保存可复用技能；剧本、人物、资产、提示词、反馈、结论和媒体始终留在各自的本地项目目录。
 
@@ -6,6 +6,7 @@
 
 - `short-drama-director`：中心路由；按任务调用次级技能，不承载阶段细则。
 - `short-drama-script-analysis`：剧本诊断、人物关系、节奏和项目建档。
+- `short-drama-story-writing`：在保护原剧情与对白的前提下，将剧本完善为可视化、可表演的故事稿。
 - `short-drama-assets`：人物、场景、道具和参考音频资产。
 - `short-drama-prompts`：视频提示词中心；按需加载内部规则模块、模板、适配器和库。
 
@@ -39,7 +40,7 @@ references/
 
 - `初版`：2.0精简重构前的完整快照。
 - `v2.0-final`：2.0最终归档，精确指向 `v2.0.33`。
-- 当前维护版本：`3.0.0`。
+- 当前维护版本：`3.1.0`。
 - `scripts/validate.ps1`：验证技能、版本、相对链接和模块路由。
 - `scripts/install.ps1`：把仓库技能安全安装到本地 Codex 技能目录并复核。
 - `scripts/sync.ps1`：先验证并安装本地技能，再按严格白名单和隐私扫描提交；可发布与 `VERSION` 一致的不可移动版本标签，普通推送且不强推。
@@ -47,5 +48,5 @@ references/
 发布新版本示例：
 
 ```powershell
-pwsh -File scripts/sync.ps1 push -Message "refactor: release modular 3.0" -Tag v3.0.0
+pwsh -File scripts/sync.ps1 push -Message "release: update skills to 3.1.0" -Tag v3.1.0
 ```

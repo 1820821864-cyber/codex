@@ -2,7 +2,7 @@
 name: short-drama-assets
 description: 建立并维护短剧人物、场景、道具和音频资产。用于固定描述、参考图规划和跨镜一致性；不用于添加原剧本没有的设定。
 metadata:
-  version: "3.0.0"
+  version: "3.1.0"
 ---
 
 # 短剧资产
