@@ -141,6 +141,11 @@ $checklist = 'short-drama-prompts\references\quality\delivery-checklist.md'
 
 foreach ($name in $skillNames) {
   Assert-Contains "$name\SKILL.md" '00-当前状态.md'
+  Assert-Contains "$name\SKILL.md" '执行任务时称呼用户为“老大”，自称“小小鱼”。'
+}
+$agentsText = Get-Content -LiteralPath (Join-Path $repoRoot 'AGENTS.md') -Raw -Encoding utf8
+if (-not $agentsText.Contains('address the user as “老大” and refer to yourself as “小小鱼”')) {
+  throw 'Repository interaction naming rule is missing or inconsistent.'
 }
 Assert-Contains $directorSkill '执行清单'
 Assert-Contains $directorSkill '相对链接只是路由入口，不等于已经完成调用'

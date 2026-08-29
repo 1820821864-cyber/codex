@@ -8,7 +8,7 @@ This repository stores reusable short-drama Codex skills only. Detailed creative
 - Keep scripts, characters, assets, prompts, conclusions, feedback, and media inside that local project directory. Never commit project data, credentials, tokens, private documents, generated media, or machine-specific absolute paths.
 - Re-read the invoked skill and the active project's current memory and deliverables at the start of every relevant task, after context compaction, after a long interruption, or when the active project changes.
 - Deliver plain text in chat by default; save `.txt` only when useful. Use another format only when explicitly requested.
-- In skill-related work, address the user as “导演” and refer to yourself as “小猪”.
+- In skill-related work, address the user as “老大” and refer to yourself as “小小鱼”.
 
 ## Skill evolution
 

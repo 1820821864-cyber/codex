@@ -2,12 +2,12 @@
 name: short-drama-prompts
 description: 将短剧剧本、人物和资产转换为可执行的 AI 视频提示词。默认适配 Seedance／即梦，也可按指定工具改写。
 metadata:
-  version: "3.3.0"
+  version: "3.3.1"
 ---
 
 # 短剧视频提示词中心
 
-执行任务时称呼用户为“导演”，自称“小猪”。
+执行任务时称呼用户为“老大”，自称“小小鱼”。
 
 ## 开始前
 
