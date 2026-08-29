@@ -231,6 +231,13 @@ if ($LASTEXITCODE -ne 0 -or $branch -ne 'main') {
 }
 $origin = (& git -C $repoRoot remote get-url origin).Trim()
 if ($LASTEXITCODE -ne 0 -or [string]::IsNullOrWhiteSpace($origin)) { throw 'Remote origin is not configured.' }
+$allowedOrigins = @(
+  'https://github.com/1820821864-cyber/codex',
+  'https://github.com/1820821864-cyber/codex.git'
+)
+if ($origin -notin $allowedOrigins) {
+  throw "Remote origin is not the approved repository: $origin"
+}
 $upstream = (& git -C $repoRoot rev-parse --abbrev-ref --symbolic-full-name '@{u}').Trim()
 if ($LASTEXITCODE -ne 0 -or $upstream -ne 'origin/main') {
   throw "Expected upstream origin/main; current upstream: $upstream"
@@ -262,8 +269,8 @@ if ([string]::IsNullOrWhiteSpace($changes)) {
   Write-Host '[sync] No changes to commit.'
   Assert-HeadTree
   Assert-WorkingSkillsMatchHead
-  Invoke-Git @('push','origin','main:main')
   & (Join-Path $PSScriptRoot 'install.ps1')
+  Invoke-Git @('push','origin','main:main')
   Publish-Tag $Tag
   exit 0
 }
@@ -275,8 +282,8 @@ if ($stagedLines.Count -eq 0) {
   Write-Host '[sync] No allowlisted changes to commit.'
   Assert-HeadTree
   Assert-WorkingSkillsMatchHead
-  Invoke-Git @('push','origin','main:main')
   & (Join-Path $PSScriptRoot 'install.ps1')
+  Invoke-Git @('push','origin','main:main')
   Publish-Tag $Tag
   exit 0
 }
@@ -323,6 +330,6 @@ if ($LASTEXITCODE -ne 0 -or $committedMessage -ne $Message) {
 }
 Assert-HeadTree
 Assert-WorkingSkillsMatchHead
-Invoke-Git @('push','origin','main:main')
 & (Join-Path $PSScriptRoot 'install.ps1')
+Invoke-Git @('push','origin','main:main')
 Publish-Tag $Tag

@@ -100,6 +100,8 @@ $requiredPromptFiles = @(
   'references\templates\director-compact.md',
   'references\adapters\seedance.md',
   'references\libraries\camera.md',
+  'references\libraries\shot-scale-atmosphere.md',
+  'references\libraries\axis-line.md',
   'references\libraries\lighting.md',
   'references\libraries\ritual-vfx.md',
   'references\quality\delivery-checklist.md',
@@ -111,4 +113,82 @@ foreach ($relative in $requiredPromptFiles) {
   }
 }
 
-Write-Host "[validate] Short-drama skills, versions, links, and module routing passed: $SkillsRoot"
+function Assert-Contains([string]$RelativePath, [string]$Expected) {
+  $path = Join-Path $SkillsRoot $RelativePath
+  if (-not (Test-Path -LiteralPath $path -PathType Leaf)) { throw "Missing invariant file: $RelativePath" }
+  $text = Get-Content -LiteralPath $path -Raw -Encoding utf8
+  if (-not $text.Contains($Expected)) { throw "Confirmed invariant missing in $RelativePath`: $Expected" }
+}
+
+function Assert-NotContains([string]$RelativePath, [string]$Forbidden) {
+  $path = Join-Path $SkillsRoot $RelativePath
+  $text = Get-Content -LiteralPath $path -Raw -Encoding utf8
+  if ($text.Contains($Forbidden)) { throw "Regressed rule detected in $RelativePath`: $Forbidden" }
+}
+
+$directorSkill = 'short-drama-director\SKILL.md'
+$promptSkill = 'short-drama-prompts\SKILL.md'
+$ruleIndex = 'short-drama-prompts\references\maintenance\rule-index.md'
+$assetsSkill = 'short-drama-assets\SKILL.md'
+$assetsModule = 'short-drama-prompts\references\modules\assets-references.md'
+$audioModule = 'short-drama-prompts\references\modules\audio-timeline.md'
+$timingModule = 'short-drama-prompts\references\modules\timing-segmentation.md'
+$shotModule = 'short-drama-prompts\references\modules\shot-continuity.md'
+$styleModule = 'short-drama-prompts\references\modules\project-style.md'
+$outputModule = 'short-drama-prompts\references\modules\output-format.md'
+$template = 'short-drama-prompts\references\templates\director-compact.md'
+$checklist = 'short-drama-prompts\references\quality\delivery-checklist.md'
+
+foreach ($name in $skillNames) {
+  Assert-Contains "$name\SKILL.md" '00-当前状态.md'
+}
+Assert-Contains $directorSkill '执行清单'
+Assert-Contains $directorSkill '相对链接只是路由入口，不等于已经完成调用'
+Assert-Contains $directorSkill 'short-drama-image-design'
+Assert-Contains $promptSkill '递归补齐“必需依赖”'
+Assert-Contains $promptSkill '创意母版'
+Assert-Contains $promptSkill '标题、场号和制作说明不得误判为成片旁白'
+Assert-NotContains $promptSkill '不进行生成稳定性评级'
+Assert-Contains $ruleIndex '运行期依赖闭包'
+Assert-Contains $ruleIndex 'libraries/shot-scale-atmosphere.md'
+Assert-Contains $ruleIndex 'libraries/axis-line.md'
+Assert-Contains 'short-drama-prompts\references\libraries\shot-scale-atmosphere.md' '景别跳级与情绪量级'
+Assert-Contains 'short-drama-prompts\references\libraries\shot-scale-atmosphere.md' '场景化景别组织'
+Assert-Contains 'short-drama-prompts\references\libraries\axis-line.md' '三类核心轴线'
+Assert-Contains 'short-drama-prompts\references\libraries\axis-line.md' '合法越轴方法'
+Assert-Contains $timingModule '逐镜四层审查'
+Assert-Contains $timingModule '其他工具按适配器'
+Assert-Contains $audioModule '核心声音焦点可随景别改变'
+Assert-Contains $audioModule '项目未确认音乐方案'
+Assert-Contains $styleModule 'STY-04 剪辑方式'
+Assert-Contains 'short-drama-prompts\references\modules\source-context.md' '剧本文本分类'
+Assert-Contains $shotModule 'CAM-FRAME 实际位置与入画边界'
+Assert-Contains $shotModule 'CAM-POSE 人物姿态与机位高度'
+Assert-Contains $shotModule 'CAM-PROP 道具状态与交接'
+Assert-Contains $shotModule '下一镜从<继承的主体／动作／视线／方向／构图重心／声音锚点>承接'
+Assert-Contains $assetsModule 'AST-SCENE 原有场景资产复用'
+Assert-Contains $assetsModule 'AST-STATE 项目身体与形态状态'
+Assert-Contains $assetsSkill '待绑定参考'
+Assert-Contains $assetsSkill '不得标为可投产'
+Assert-Contains $assetsModule '确认文字生成'
+Assert-Contains $assetsModule '未解析占位符'
+Assert-Contains $outputModule '制作参考层'
+Assert-Contains $outputModule '视频模型复制层'
+Assert-Contains $outputModule '未解析占位符'
+Assert-Contains $template '【第<X>集统一词头·严格锁定】'
+Assert-Contains $template '本段执行约束：'
+Assert-Contains $template '【镜头一｜时长<X.X>秒】'
+Assert-Contains $checklist '执行与依据清单'
+Assert-Contains $checklist '<实际状态>'
+
+$checkText = Get-Content -LiteralPath (Join-Path $SkillsRoot $checklist) -Raw -Encoding utf8
+if ($checkText -match '(?m)^\d+\..*：通过\s*$') {
+  throw 'Delivery checklist must not prefill result rows as passed.'
+}
+
+$readmeText = Get-Content -LiteralPath (Join-Path $repoRoot 'README.md') -Raw -Encoding utf8
+if (-not $readmeText.Contains("当前维护版本：``$expectedVersion``")) {
+  throw "README current version does not match VERSION: $expectedVersion"
+}
+
+Write-Host "[validate] Skills, versions, links, dependency routing, 3.3 invariants, and installed-layout compatibility passed: $SkillsRoot"
