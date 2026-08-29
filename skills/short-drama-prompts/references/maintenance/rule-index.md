@@ -9,17 +9,17 @@
 | 人物／场景／道具、逐段资产筛选、参考职责、三视图、可读文字资产 | `modules/assets-references.md` | source-context | 声音资产读audio | 10–11、20、29–34、38 |
 | 对白表演、情绪词、微动作、长对白、反应 | `modules/performance.md` | source-context、audio | 明显动作或跨镜时读shot | 6、12、23、25 |
 | 摄影机、空间、透视、受力动作、段间快照、硬切 | `modules/shot-continuity.md` | source-context | 对白表演读performance；镜长读timing；选镜读camera | 9、13、15–16、22 |
-| 实际位置与入画边界 CAM-FRAME、人物姿态 CAM-POSE、道具交接 CAM-PROP | `modules/shot-continuity.md` | source-context、assets | 字段读output-format | 5、12–13、16–17、22 |
+| 实际位置、每镜入画与风险触发式排除 CAM-FRAME、人物姿态 CAM-POSE、道具交接 CAM-PROP | `modules/shot-continuity.md` | source-context、assets | 字段读output-format | 5、12–13、16–17、22、40 |
 | 原有实体复用 AST-SCENE、项目身体与形态状态 AST-STATE | `modules/assets-references.md` | source-context | 跨镜延续读shot | 10–13、29、32–33 |
 | 单镜时长、4–30秒分段、核算、长镜头审批 | `modules/timing-segmentation.md` | source-context | 正式音频读audio；动作可完成性读shot | 7、9、21 |
 | 视觉媒介、项目风格、画幅、光影边界 | `modules/project-style.md` | 无 | 建立或核对光影时读lighting | 14、24、26 |
-| 交付层级、每段词头、资产区、字段、省略、负向 | `modules/output-format.md` | 本次已加载的业务模块 | 正式单集读template；工具差异读adapter | 5、17、20、34–38 |
+| 交付层级、独立文档、每段词头、必填字段、结构计数、省略与负向 | `modules/output-format.md` | 本次已加载的业务模块 | 正式单集读template；工具差异读adapter | 5、17、20、34–40 |
 | 景别、角度、焦点、运镜选项 | `libraries/camera.md` | 无 | 由shot按需查询 | 15、22 |
 | 光型、色彩、光线故障修正 | `libraries/lighting.md` | 无 | 由project-style按需查询 | 14 |
 | 仪式阵列、等级映射、特效变化、递进对比 | `libraries/ritual-vfx.md` | source-context、shot | camera、lighting | 15 |
 | Seedance／即梦工具特有字段 | `adapters/seedance.md` | output-format | assets | 5、10、20 |
-| 导演偏好紧凑排版 | `templates/director-compact.md` | output-format | 本次已加载的业务模块 | 5、20、34–37 |
-| 交付状态与检查映射 | `quality/delivery-checklist.md` | 本次全部业务模块 | 相关条件库 | 1–38 |
+| 导演偏好紧凑排版 | `templates/director-compact.md` | output-format | 本次已加载的业务模块 | 5、20、34–37、39–40 |
+| 交付状态与检查映射 | `quality/delivery-checklist.md` | 本次全部业务模块 | 相关条件库 | 1–40 |
 
 ## 更新协议
 
