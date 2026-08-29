@@ -53,7 +53,8 @@ $skillNames = @(
   'short-drama-script-analysis',
   'short-drama-story-writing',
   'short-drama-assets',
-  'short-drama-prompts'
+  'short-drama-prompts',
+  'short-drama-image-design'
 )
 & (Join-Path $PSScriptRoot 'validate.ps1') -SkillsRoot $sourceRoot
 

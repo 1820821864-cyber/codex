@@ -44,7 +44,8 @@ $skillNames = @(
   'short-drama-script-analysis',
   'short-drama-story-writing',
   'short-drama-assets',
-  'short-drama-prompts'
+  'short-drama-prompts',
+  'short-drama-image-design'
 )
 $expectedVersion = (Get-Content -LiteralPath (Join-Path $repoRoot 'VERSION') -Raw -Encoding utf8).Trim()
 

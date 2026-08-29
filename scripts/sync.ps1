@@ -26,8 +26,9 @@ function Test-AllowedRepositoryPath([string]$Path, [switch]$AllowLegacy) {
   $normalized = $Path.Replace('\', '/')
   if ($normalized -match '^(\.gitignore|AGENTS\.md|README\.md|VERSION)$') { return $true }
   if ($normalized -match '^scripts/(install|sync|validate)\.ps1$') { return $true }
-  if ($normalized -match '^skills/(short-drama-director|short-drama-script-analysis|short-drama-story-writing|short-drama-assets|short-drama-prompts)/(SKILL\.md|agents/openai\.yaml)$') { return $true }
+  if ($normalized -match '^skills/(short-drama-director|short-drama-script-analysis|short-drama-story-writing|short-drama-assets|short-drama-prompts|short-drama-image-design)/(SKILL\.md|agents/openai\.yaml)$') { return $true }
   if ($normalized -match '^skills/short-drama-prompts/references/(modules|templates|adapters|libraries|quality|maintenance)/[a-z0-9][a-z0-9-]*\.md$') { return $true }
+  if ($normalized -match '^skills/short-drama-image-design/references/[a-z0-9][a-z0-9-]*\.md$') { return $true }
 
   $legacyPromptFiles = '^skills/short-drama-prompts/references/(delivery-checklist|director-compact-format|lighting-library|seedance|shot-library)\.md$'
   return $AllowLegacy -and $normalized -match $legacyPromptFiles

@@ -2,7 +2,7 @@
 name: short-drama-director
 description: 统筹短剧剧本分析、资产管理与 AI 视频提示词制作。用于完整工作流、跨阶段任务，或需要判断应调用哪个短剧次级技能时。
 metadata:
-  version: "3.1.0"
+  version: "3.2.0"
 ---
 
 # 短剧导演中心
@@ -25,8 +25,9 @@ metadata:
 | 剧情故事化、补足可见事件、动作因果和情绪推进 | [short-drama-story-writing](../short-drama-story-writing/SKILL.md) |
 | 人物、场景、道具、参考图或参考音频资产 | [short-drama-assets](../short-drama-assets/SKILL.md) |
 | 分镜、对白表演、时间线、生成段、视频提示词或交付检查 | [short-drama-prompts](../short-drama-prompts/SKILL.md) |
+| 剧情图、宣传海报、角色视觉、参考图生成、图像编辑或生图验收 | [short-drama-image-design](../short-drama-image-design/SKILL.md) |
 
-完整流程按“剧本分析 → 故事编写 → 资产 → 视频提示词”调用；不需要故事化时可跳过故事编写。已有合格上游交付时直接从所需阶段开始，不重复已完成工作。每个次级技能仍可单独调用，并保持自包含。
+完整视频流程按“剧本分析 → 故事编写 → 资产 → 视频提示词”调用；制图任务按需读取分析、故事、资产或提示词交付，再进入制图分支。无需故事化时可跳过故事编写。已有合格上游交付时直接从所需阶段开始，不重复已完成工作。每个次级技能仍可单独调用，并保持自包含。
 
 ## 跨阶段约束
 
