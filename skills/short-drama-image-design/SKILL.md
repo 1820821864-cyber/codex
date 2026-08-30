@@ -2,7 +2,7 @@
 name: short-drama-image-design
 description: 将短剧剧情、人物与资产转化为可执行的剧情图、宣传海报、角色视觉和图像编辑方案，并检查人物身份、空间物理、情绪叙事与文字准确性。用于短剧相关生图及改图；不负责改写剧情或制作视频分镜。
 metadata:
-  version: "3.3.1"
+  version: "3.3.2"
 ---
 
 # 短剧制图
