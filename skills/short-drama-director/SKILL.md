@@ -2,7 +2,7 @@
 name: short-drama-director
 description: 统筹短剧剧本分析、资产管理与 AI 视频提示词制作。用于完整工作流、跨阶段任务，或需要判断应调用哪个短剧次级技能时。
 metadata:
-  version: "3.3.2"
+  version: "3.3.3"
 ---
 
 # 短剧导演中心

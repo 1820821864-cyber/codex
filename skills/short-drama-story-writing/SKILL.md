@@ -2,7 +2,7 @@
 name: short-drama-story-writing
 description: 将短剧原稿完善为可视化、可表演且前后连贯的故事稿。用于剧情故事化、补足动作与情绪推进、强化画面事件；不用于直接生成分镜提示词或擅自改变原剧情。
 metadata:
-  version: "3.3.2"
+  version: "3.3.3"
 ---
 
 # 短剧故事编写

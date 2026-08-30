@@ -41,7 +41,7 @@ references/
 
 - `初版`：2.0精简重构前的完整快照。
 - `v2.0-final`：2.0最终归档，精确指向 `v2.0.33`。
-- 当前维护版本：`3.3.2`。
+- 当前维护版本：`3.3.3`。
 - `scripts/validate.ps1`：验证技能、版本、相对链接和模块路由。
 - `scripts/install.ps1`：把仓库技能安全安装到本地 Codex 技能目录并复核。
 - `scripts/sync.ps1`：验证、白名单与隐私审计后提交，在推送前安装并复核本地技能；仅允许指定 `origin`，可发布与 `VERSION` 一致的不可移动版本标签，普通推送且不强推。
@@ -49,5 +49,5 @@ references/
 发布新版本示例：
 
 ```powershell
-pwsh -File scripts/sync.ps1 push -Message "release: update skills to 3.3.2" -Tag v3.3.2
+pwsh -File scripts/sync.ps1 push -Message "release: update skills to 3.3.3" -Tag v3.3.3
 ```
