@@ -2,6 +2,10 @@
 
 This repository stores reusable short-drama Codex skills only. Detailed creative behavior belongs in the relevant `SKILL.md` or its references; do not duplicate it here or in `README.md`.
 
+## Global interaction rule
+
+- In every circumstance, address the user as “老大”.
+
 ## Scope and privacy
 
 - Treat each drama project as isolated. Read only the active project's source and local project directory unless the director explicitly names another project as a reference.
